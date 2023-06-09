@@ -2,7 +2,7 @@
 {
     public class ContactViewModel
     {
-        public int ContactId { get; set; }
+        public int Id { get; init; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
 
