@@ -6,7 +6,7 @@ namespace CarShop.Data.Entities
     public class Car
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } 
 
         [Required]
         [MaxLength(ModelMaxLength)]
@@ -30,6 +30,7 @@ namespace CarShop.Data.Entities
         [Required]
         public ApplicationUser Owner { get; set; } = null!;
 
+        [InverseProperty(nameof(Car))]
         public virtual ICollection<Issue> Issues { get; set; } = new HashSet<Issue>();
     }
 }

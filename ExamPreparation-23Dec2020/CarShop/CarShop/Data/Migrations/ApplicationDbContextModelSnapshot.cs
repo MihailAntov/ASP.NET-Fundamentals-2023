@@ -52,7 +52,7 @@ namespace CarShop.Data.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Cars");
+                    b.ToTable("Cars", (string)null);
                 });
 
             modelBuilder.Entity("CarShop.Data.Entities.Issue", b =>
@@ -75,7 +75,7 @@ namespace CarShop.Data.Migrations
 
                     b.HasIndex("CarId");
 
-                    b.ToTable("Issues");
+                    b.ToTable("Issues", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

@@ -21,12 +21,14 @@ namespace CarShop.Controllers
             return View(model);
         }
 
+        [Authorize(Roles = "Customer")]
         [HttpGet]
         public IActionResult Add()
         {
             return View();
         }
 
+        [Authorize(Roles = "Customer")]
         [HttpPost]
         public async Task<IActionResult> Add(CarFormViewModel model)
         {
